@@ -1,0 +1,81 @@
+let mapleader = " "
+set number relativenumber
+set scrolloff=10
+set showmode=true
+set showcmd
+set visualbell
+set hlsearch
+set ideamarks
+set ignorecase
+set clipboard+=unnamed
+
+
+" -------------PLUGINS-------------"
+set sneak " allows searching on multiple lines and searches for 2 chars
+set NERDTree
+set idearefactormode=keep
+set smartcase set incsearch line
+
+Plug 'tpope/vim-commentary'
+set highlightedyank "Shows the yanked text as green
+let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)":view
+
+" -------------KEYMAPPINGS-------------"
+map gf :action SelectInProjectView<CR>
+noremap <Up> <C-P>
+noremap <Down> <C-N>" Set the basic search to <leader> ss
+nnoremap <leader>ss :action Find<CR>
+
+" Set search and replace to <leader> sr
+nnoremap <leader>sr :action Replace<CR>vmap <leader>d
+"+d
+nmap <leader>y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P" Scrolling
+nmap <leader>d <C-d>
+nmap <leader>u <C-u>
+vmap <leader>d <C-d>
+vmap <leader>u <C-u>
+" Actions
+nmap <C-h> <action>(PreviousTab)
+nmap <C-l> <action>(NextTab)
+nmap <A-w> <action>(CloseEditor)
+nmap <leader>i <action>(Generate)
+nmap <leader>m <action>(Git.Menu)
+nmap <leader>s <action>(QuickChangeScheme)
+nmap <leader>/ <action>(ShowErrorDescription)
+nmap <leader>e <action>(GotoNextError)
+nnoremap <leader><leader> <C-Tab>
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)" File navigation
+map <leader>ff <action>(GotoFile)
+map <leader>fr <action>(RecentFiles)
+map <leader>fc <action>(FindInPath)
+map <leader><leader> <Action>(RecentFiles)
+map <leader>fl <action>(RecentLocations)
+map <leader>fs <action>(NewScratchFile)
+
+"Which-Key settings
+set which-key
+let g:WhichKey_CommandColor = "#41EAD4
+let g:WhichKey_PrefixColor = "#F335B2
+let g:WhichKey_SortOrder = "by_key_prefix_first"
+let g:WhichKeyDesc_leader = "<leader> Leader key"
+let g:WhichKeyDesc_close_tab = "<leader>ss Search File"
+let g:WhichKeyDesc_close_tab = "<leader>b Close active tab"
+let g:WhichKeyDesc_file_quickLook = "<leader><leader> Recent files"
+let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
+let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
+let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
+let g:WhichKeyDesc_refactoring_variable = "<leader>rv Introduce variable"
+let g:WhichKeyDesc_refactoring_field = "<leader>rf Introduce field"
+let g:WhichKeyDesc_refactoring_signature = "<leader>rs Change signature"
+let g:WhichKeyDesc_refactoring_all = "<leader>rr Open refactorings list"
+set timeoutlen=5000
