@@ -4,7 +4,7 @@ return {
     version = "*",
     opts = {
       direction = "float",
-      open_mapping = "<leader>t",
+      open_mapping = "<C-\\>",
     },
   },
 }
