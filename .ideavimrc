@@ -1,81 +1,104 @@
 let mapleader = " "
+
+""" Idea specific settings ------------------
+set ideajoin
+
 set number relativenumber
+set clipboard+=unnamed
+set hlsearch
 set scrolloff=10
 set showmode=true
 set showcmd
 set visualbell
-set hlsearch
-set ideamarks
 set ignorecase
-set clipboard+=unnamed
+set ideawrite
+set commentary
 
 
-" -------------PLUGINS-------------"
-set sneak " allows searching on multiple lines and searches for 2 chars
+""" Navigation --------------------------------
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+nnoremap H gT
+nnoremap L gt
+
+"""Split Windows
+nnoremap <leader>wv :action SplitVertically<CR>
+nnoremap <leader>wh :action SplitHorizontally<CR>
+nnoremap <leader>wd :action CloseContent<CR>
+nnoremap <leader>ww :action NextTab<CR>
+
+
+""" Plugins  --------------------------------
 set NERDTree
-set idearefactormode=keep
-set smartcase set incsearch line
+nnoremap <leader>e :NERDTreeToggle<CR>
 
-Plug 'tpope/vim-commentary'
-set highlightedyank "Shows the yanked text as green
-let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)":view
+set highlightedyank
+set commentary
+set argtextobj
+set ReplaceWithRegister
+set argtextobj
+set exchange
+set quickscope "Needs marketplace plugin
+set surround
+set multiple-cursors
+set matchit
 
-" -------------KEYMAPPINGS-------------"
-map gf :action SelectInProjectView<CR>
-noremap <Up> <C-P>
-noremap <Down> <C-N>" Set the basic search to <leader> ss
-nnoremap <leader>ss :action Find<CR>
+""" SEARCHING -------------------------------
+""" EasyMotion & Sneak
+set sneak "Needs marketplace plugin
+" Requires IdeaVim-EasyMotion & AceJump plugins from plugin store
+" (easymotion-f) search forward
+" (easymotion-S) search backward
+set easymotion
+map <leader>s <Plug>(easymotion-f)
+map <leader>S <Plug>(easymotion-s)
+noremap <leader>/ :action FindInPath<CR>
 
-" Set search and replace to <leader> sr
-nnoremap <leader>sr :action Replace<CR>vmap <leader>d
-"+d
-nmap <leader>y "+yy
-nmap <leader>p "+p
-nmap <leader>P "+P
-vmap <leader>p "+p
-vmap <leader>P "+P" Scrolling
-nmap <leader>d <C-d>
-nmap <leader>u <C-u>
-vmap <leader>d <C-d>
-vmap <leader>u <C-u>
-" Actions
-nmap <C-h> <action>(PreviousTab)
-nmap <C-l> <action>(NextTab)
-nmap <A-w> <action>(CloseEditor)
-nmap <leader>i <action>(Generate)
-nmap <leader>m <action>(Git.Menu)
-nmap <leader>s <action>(QuickChangeScheme)
-nmap <leader>/ <action>(ShowErrorDescription)
-nmap <leader>e <action>(GotoNextError)
-nnoremap <leader><leader> <C-Tab>
-" Refactoring
-map <leader>rn <Action>(RenameElement)
-map <leader>rm <Action>(ExtractMethod)
-map <leader>rv <Action>(IntroduceVariable)
-map <leader>rf <Action>(IntroduceField)
-map <leader>rs <Action>(ChangeSignature)
-map <leader>rr <Action>(Refactorings.QuickListPopupAction)" File navigation
+"""Files
+nnoremap <leader>bd :bdelete<CR>
+nnoremap <leader>bo :action CloseAllEditorsButActive<CR>
+nnoremap <leader>bl :action CloseAllToTheLeft<CR>
+nnoremap <leader>br :action CloseAllToTheRight<CR>
+
+""" Code------------------
+nnoremap <leader>cr :action RenameElement<CR>
+nnoremap <leader>cf :action ReformatCode<CR>
+nnoremap <leader>co :action OptimizeImports<CR>
+nnoremap <leader>cR :action RemoveUnusedImports<CR>
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+nnoremap <leader>ce :action GotoNextError<CR>
+nnoremap <leader>cg :action Generate<CR>
+nnoremap <leader>cd :action Debug<CR>
+nnoremap <leader>cn :action Run<CR>
+
+""" Find------------------
 map <leader>ff <action>(GotoFile)
-map <leader>fr <action>(RecentFiles)
-map <leader>fc <action>(FindInPath)
-map <leader><leader> <Action>(RecentFiles)
-map <leader>fl <action>(RecentLocations)
-map <leader>fs <action>(NewScratchFile)
+nnoremap <leader>fr :action RecentFiles<CR>
+nnoremap <leader>fr :action RecentFiles<CR>
+nnoremap <leader>ft :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>fT :action Terminal.OpenInTerminal<CR>
+noremap <leader>fc :action SelectInProjectView<CR>
 
-"Which-Key settings
+""" Refactor------------------
+noremap <leader>rn :action RenameElement<CR>
+noremap <leader>rc :action IntroduceConstant<CR>
+noremap <leader>rm :action ExtractMethod<CR>
+noremap <leader>rf :action GotoFile<CR>
+noremap <leader>rv :action IntroduceVariable<CR>
+
+""" Other------------------
+nnoremap gi :action GotoImplementation<CR>
+nnoremap <leader>z :action ToggleDistractionFreeMode<CR>
+
+"""Which key
 set which-key
-let g:WhichKey_CommandColor = "#41EAD4
-let g:WhichKey_PrefixColor = "#F335B2
-let g:WhichKey_SortOrder = "by_key_prefix_first"
 let g:WhichKeyDesc_leader = "<leader> Leader key"
-let g:WhichKeyDesc_close_tab = "<leader>ss Search File"
-let g:WhichKeyDesc_close_tab = "<leader>b Close active tab"
-let g:WhichKeyDesc_file_quickLook = "<leader><leader> Recent files"
-let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
-let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
-let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
-let g:WhichKeyDesc_refactoring_variable = "<leader>rv Introduce variable"
-let g:WhichKeyDesc_refactoring_field = "<leader>rf Introduce field"
-let g:WhichKeyDesc_refactoring_signature = "<leader>rs Change signature"
-let g:WhichKeyDesc_refactoring_all = "<leader>rr Open refactorings list"
-set timeoutlen=5000
+set notimeout
+
+let g:WhichKeyDesc_commentray_prefix = "gc"
+let g:WhichKeyDesc_commentray_action = "gcc"
