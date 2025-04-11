@@ -3,13 +3,10 @@ return {
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
   opts = {
-    -- add any opts here
-    -- for example
-    provider = "gemini",
-    gemini = {
-      -- Using GOOGLE_API_KEY environment variable
-      api_key_name = "GOOGLE_API_KEY",
-      model = "gemini-2.0-flash",
+    provider = "claude",
+    claude = {
+      api_key_name = "ANTHROPIC_API_KEY", -- looks at global shell env
+      model = "claude-3-7-sonnet-20250219",
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
