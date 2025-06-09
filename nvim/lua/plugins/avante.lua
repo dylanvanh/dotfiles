@@ -6,7 +6,7 @@ return {
     provider = "claude",
     claude = {
       api_key_name = "ANTHROPIC_API_KEY", -- looks at global shell env
-      model = "claude-3-7-sonnet-20250219",
+      model = "claude-sonnet-4-20250514",
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
