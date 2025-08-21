@@ -1,6 +1,7 @@
 *
 !nvim
 !alacritty
+!alacritty/**
 !tmux
 !.gitignore
 !.ideavimrc
