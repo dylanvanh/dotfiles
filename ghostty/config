@@ -1,0 +1,18 @@
+# Ghostty Configuration
+# https://ghostty.org/docs/config
+
+# Theme Configuration
+# Using your downloaded Tokyo Night theme
+theme = /Users/dylan/.config/ghostty/tokyo-night-default
+
+# Window Configuration
+window-decoration = true
+window-theme = dark
+
+# Font Configuration
+font-family = "JetBrains Mono"
+font-size = 14
+
+# Other useful settings
+cursor-style = block
+shell-integration = zsh
