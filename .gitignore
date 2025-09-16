@@ -1,7 +1,6 @@
 *
 !nvim
 !alacritty
-!alacritty/**
 !tmux
 !.gitignore
 !.ideavimrc
@@ -9,3 +8,4 @@
 !sketchybar
 !fastfetch
 !ghostty
+!aerospace
