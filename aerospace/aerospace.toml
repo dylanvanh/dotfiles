@@ -4,15 +4,15 @@
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-    'exec-and-forget sketchybar',
-    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=3',
+  'exec-and-forget sketchybar',
+  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5',
 ]
-#
+
 # Notify Sketchybar about workspace change
 exec-on-workspace-change = [
-    '/bin/bash',
-    '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
 ]
 
 # Start AeroSpace at login
@@ -140,8 +140,8 @@ alt-t = ['exec-and-forget open -a /Applications/Telegram.app', 'workspace T']
 alt-s = ['exec-and-forget open -a /Applications/Slack.app', 'workspace S']
 alt-m = ['exec-and-forget open -a /System/Applications/Mail.app', 'workspace M']
 alt-c = [
-    'exec-and-forget open -a /System/Applications/Calendar.app',
-    'workspace C',
+  'exec-and-forget open -a /System/Applications/Calendar.app',
+  'workspace C',
 ]
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -167,8 +167,8 @@ alt-shift-semicolon = 'mode service'
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = [
-    'layout floating tiling',
-    'mode main',
+  'layout floating tiling',
+  'mode main',
 ] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
