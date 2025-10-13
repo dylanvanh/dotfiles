@@ -143,6 +143,10 @@ alt-c = [
   'exec-and-forget open -a /System/Applications/Calendar.app',
   'workspace C',
 ]
+alt-d = [
+  'exec-and-forget open -a /Users/dylan/Applications/WebStorm.app',
+  'workspace D',
+]
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
