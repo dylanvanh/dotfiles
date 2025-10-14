@@ -4,9 +4,11 @@ return {
   version = false, -- Never set this value to "*"! Never!
   opts = {
     provider = "claude",
-    claude = {
-      api_key_name = "ANTHROPIC_API_KEY", -- looks at global shell env
-      model = "claude-sonnet-4-20250514",
+    providers = {
+      claude = {
+        api_key_name = "ANTHROPIC_API_KEY", -- looks at global shell env
+        model = "claude-sonnet-4-20250514",
+      },
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
