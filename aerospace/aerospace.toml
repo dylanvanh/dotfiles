@@ -148,6 +148,7 @@ alt-d = [
 ]
 alt-a = ['exec-and-forget open -a /Applications/ChatGPT.app', 'workspace A']
 alt-b = ['exec-and-forget open -a /Applications/Bruno.app', 'workspace B']
+alt-o = ['exec-and-forget open -a /Applications/Obsidian.app', 'workspace O']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
@@ -168,6 +169,7 @@ alt-shift-c = 'move-node-to-workspace C --focus-follows-window'
 alt-shift-d = 'move-node-to-workspace D --focus-follows-window'
 alt-shift-a = 'move-node-to-workspace A --focus-follows-window'
 alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
+alt-shift-o = 'move-node-to-workspace O --focus-follows-window'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
