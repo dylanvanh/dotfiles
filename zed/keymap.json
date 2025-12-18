@@ -4,7 +4,6 @@
 		"context": "Workspace",
 		"bindings": {
 			"ctrl-/": "workspace::ToggleBottomDock",
-			"space e": "project_panel::ToggleFocus",
 			"shift-l": "pane::ActivateNextItem",
 			"shift-h": "pane::ActivatePreviousItem",
 			"shift-f": "workspace::ToggleZoom"
