@@ -1,0 +1,3 @@
+# Example: copy .env files from the primary worktree to new worktrees.
+[projects."github.com/your-org/your-repo".post-create]
+web_env = 'sh -c "if [ -f \"{{ primary_worktree_path }}/apps/web/.env\" ]; then cp \"{{ primary_worktree_path }}/apps/web/.env\" \"{{ worktree_path }}/apps/web/.env\"; fi"'
