@@ -45,3 +45,7 @@
 # 11. Install Aerospace
 
 # <https://github.com/nikitabobko/AeroSpace>
+
+# 12. Install worktrunk
+
+# <https://github.com/max-sixty/worktrunk>
