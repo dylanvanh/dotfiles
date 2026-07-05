@@ -16,3 +16,4 @@ font-size = 14
 # Other useful settings
 cursor-style = block
 shell-integration = zsh
+keybind = shift+enter=text:\x1b\r
