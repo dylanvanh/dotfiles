@@ -15,3 +15,5 @@
 !lazygit/config.yml
 !worktrunk
 !worktrunk/config.example.toml
+!diffnav/
+!diffnav/config.yml
