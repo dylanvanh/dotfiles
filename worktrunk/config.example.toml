@@ -1,3 +1,9 @@
 # Example: copy .env files from the primary worktree to new worktrees.
-[projects."github.com/your-org/your-repo".pre-start]
+# Use pipeline form: each `[[...pre-start]]` block is one serial step after
+# Worktrunk creates one worktree for the project.
+[[projects."github.com/your-org/your-repo".pre-start]]
 web_env = 'sh -c "if [ -f \"{{ primary_worktree_path }}/apps/web/.env\" ]; then cp \"{{ primary_worktree_path }}/apps/web/.env\" \"{{ worktree_path }}/apps/web/.env\"; fi"'
+
+# Add another block for another serial copy step in the same new worktree.
+[[projects."github.com/your-org/your-repo".pre-start]]
+api_env = 'sh -c "if [ -f \"{{ primary_worktree_path }}/apps/api/.env\" ]; then cp \"{{ primary_worktree_path }}/apps/api/.env\" \"{{ worktree_path }}/apps/api/.env\"; fi"'
