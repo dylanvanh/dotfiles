@@ -149,7 +149,7 @@ alt-c = [
   'workspace C',
 ]
 alt-d = [
-  'exec-and-forget open -a /Users/dylan/Applications/WebStorm.app',
+  'exec-and-forget open -a /Applications/TablePro.app',
   'workspace D',
 ]
 alt-a = ['exec-and-forget open -a /Applications/ChatGPT.app', 'workspace A']
