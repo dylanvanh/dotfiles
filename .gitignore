@@ -17,3 +17,15 @@
 !worktrunk/config.example.toml
 !diffnav/
 !diffnav/config.yml
+!sesh
+!sesh/sesh.toml
+!sesh/sesh-picker
+!opencode/
+opencode/*
+!opencode/plugins/
+opencode/plugins/*
+!opencode/plugins/tmux-agent-status.ts
+!opencode/tests/
+opencode/tests/*
+!opencode/tests/tmux-agent-status.test.mjs
+!rex

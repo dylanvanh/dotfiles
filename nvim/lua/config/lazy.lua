@@ -16,8 +16,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
 
     -- Use Eslint for fix on save and prettier for formatting
-    { import = "lazyvim.plugins.extras.linting.eslint" },
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
+    -- { import = "lazyvim.plugins.extras.linting.eslint" },
+    -- { import = "lazyvim.plugins.extras.formatting.prettier" },
 
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
 

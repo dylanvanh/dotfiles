@@ -4,6 +4,9 @@
 return {
   "folke/snacks.nvim",
   opts = {
+    image = {
+      enabled = true,
+    },
     scroll = {
       enabled = false,
       -- or leave it empty to use the default settings

@@ -52,7 +52,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = false
 
 # Preserve the config-version 1 behavior inferred from workspace bindings.
-persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'M', 'N', 'O', 'S', 'T', 'W']
+persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'G', 'M', 'N', 'O', 'S', 'T', 'W']
 
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -154,6 +154,7 @@ alt-d = [
 ]
 alt-a = ['exec-and-forget open -a /Applications/ChatGPT.app', 'workspace A']
 alt-b = ['exec-and-forget open -a /Applications/Bruno.app', 'workspace B']
+alt-g = ['exec-and-forget open -a "/Applications/Grok Bot.app"', 'workspace G']
 alt-o = ['exec-and-forget open -a /Applications/Obsidian.app', 'workspace O']
 alt-n = ['exec-and-forget open -a /System/Applications/Notes.app', 'workspace N']
 
@@ -176,6 +177,7 @@ alt-shift-c = 'move-node-to-workspace C --focus-follows-window'
 alt-shift-d = 'move-node-to-workspace D --focus-follows-window'
 alt-shift-a = 'move-node-to-workspace A --focus-follows-window'
 alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
+alt-shift-g = 'move-node-to-workspace G --focus-follows-window'
 alt-shift-o = 'move-node-to-workspace O --focus-follows-window'
 alt-shift-n = 'move-node-to-workspace N --focus-follows-window'
 

@@ -13,3 +13,26 @@ vim.cmd([[
   noremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
   noremap <silent> <c-\> :<C-U>TmuxNavigatePrevious<cr>
 ]])
+
+if vim.env.REX_SESSION and not vim.env.TMUX then
+  local navigation_keys = { h = "left", j = "down", k = "up", l = "right" }
+  local focus_timeout_2_seconds_ms = 2000
+
+  for key, direction in pairs(navigation_keys) do
+    vim.keymap.set("n", "<C-" .. key .. ">", function()
+      local current_window = vim.api.nvim_get_current_win()
+      vim.cmd("wincmd " .. key)
+      if vim.api.nvim_get_current_win() ~= current_window then
+        return
+      end
+
+      local result = vim.system({ "rex", "focus", direction, "--wrap", "-s", vim.env.REX_SESSION }, {
+        text = true,
+        timeout = focus_timeout_2_seconds_ms,
+      }):wait()
+      if result.code ~= 0 then
+        vim.notify(result.stderr, vim.log.levels.ERROR)
+      end
+    end, { desc = "Navigate " .. direction .. " across Neovim and Rex" })
+  end
+end
