@@ -28,4 +28,5 @@ opencode/plugins/*
 !opencode/tests/
 opencode/tests/*
 !opencode/tests/tmux-agent-status.test.mjs
-!rex
+!rex/
+!rex/**
