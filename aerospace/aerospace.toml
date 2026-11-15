@@ -106,7 +106,7 @@ run = 'layout floating'
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut
 # (like in i3)
-alt-enter = 'exec-and-forget open -n -a Ghostty'
+alt-enter = '''exec-and-forget "$HOME/Library/Application Support/com.superlogical.rex/RexServer/Versions/Current/Rex Server.app/Contents/MacOS/rex" do client.window.new || open -a "Rex Beta"'''
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
@@ -152,7 +152,7 @@ alt-d = [
   'exec-and-forget open -a /Applications/TablePro.app',
   'workspace D',
 ]
-alt-a = ['exec-and-forget open -a /Applications/ChatGPT.app', 'workspace A']
+alt-a = ['exec-and-forget open -a /Applications/Claude.app', 'workspace A']
 alt-b = ['exec-and-forget open -a /Applications/Bruno.app', 'workspace B']
 alt-g = ['exec-and-forget open -a "/Applications/Grok Bot.app"', 'workspace G']
 alt-o = ['exec-and-forget open -a /Applications/Obsidian.app', 'workspace O']
