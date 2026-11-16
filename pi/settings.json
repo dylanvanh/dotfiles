@@ -1,0 +1,7 @@
+{
+  "lastChangelogVersion": "1.5.2",
+  "npmCommand": ["bun"],
+  "packages": [
+    "npm:pi-vim@0.16.0"
+  ]
+}

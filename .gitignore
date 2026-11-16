@@ -30,3 +30,5 @@ opencode/tests/*
 !opencode/tests/tmux-agent-status.test.mjs
 !rex/
 !rex/**
+!pi/
+!pi/settings.json
